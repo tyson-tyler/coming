@@ -1,13 +1,13 @@
 "use client";
 
-import unSubscribe from "@/hooks/useSubscribe";
+import UseSubscribe from "@/hooks/useSubscribe";
 import Button from "./shared/Button";
 interface SubscribeButtonProps {
   channelId: string;
 }
 
 const SubscribeButton: React.FC<SubscribeButtonProps> = ({ channelId }) => {
-  const { hasSubcribed, toogleSubscribed } = unSubscribe({ channelId });
+  const { hasSubcribed, toogleSubscribed } = UseSubscribe({ channelId });
   return (
     <Button
       type={hasSubcribed ? "secondary" : "primary"}

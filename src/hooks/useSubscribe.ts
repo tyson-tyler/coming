@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 interface UseSubscribeProps {
   channelId: string;
 }
-const unSubscribe = ({ channelId }: UseSubscribeProps) => {
+const UseSubscribe = ({ channelId }: UseSubscribeProps) => {
   const currentUser = useContext(CurrentUserContext);
 
   const router = useRouter();
@@ -43,4 +43,4 @@ const unSubscribe = ({ channelId }: UseSubscribeProps) => {
 
   return { hasSubcribed, toogleSubscribed };
 };
-export default unSubscribe;
+export default UseSubscribe;

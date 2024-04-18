@@ -37,7 +37,7 @@ const Footer = () => {
     >
       <div className="flex justify-between md:hidden">
         {items.map((item, index) => (
-          <Link href={item.url} className="flex ml-5 mr-5">
+          <Link href={item.url} className="flex ml-5 mr-5" key={index}>
             <div className="flex  items-center gap-x-3  text-2xl my-5 opacity-80 hover:opacity-100 gap-6">
               <div className="flex">{item.logo}</div>
             </div>
