@@ -1,15 +1,33 @@
+import React, { useEffect, useState } from "react";
 import getSubscriptionVideos from "@/actions/getSubscriptionVideo";
 import SubscriptionList from "@/components/subscription/Subscription";
-import React from "react";
+import Loader from "@/components/Loader";
 
-export default async function Subscription() {
-  const subscriptionVideos = await getSubscriptionVideos();
+export default function Subscription() {
+  const [loading, setLoading] = useState(true);
+  const [subscriptionVideos, setSubscriptionVideos] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchSubscriptionVideos = async () => {
+      try {
+        const videos = await getSubscriptionVideos();
+        setSubscriptionVideos(videos);
+      } catch (error) {
+        console.error("Error fetching subscription videos:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSubscriptionVideos();
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return subscriptionVideos.length ? (
-    // <SubscriptionList channel={subscriptionVideos} />
-    <div className="flex justify-center items-center w-full h-screen">
-      <h1 className="text-md usespan">No Video</h1>
-    </div>
+    <SubscriptionList videos={subscriptionVideos} />
   ) : (
     <div className="flex justify-center items-center w-full h-screen">
       <h1 className="text-md usespan">No Video</h1>
