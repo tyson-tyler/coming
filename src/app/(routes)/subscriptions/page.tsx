@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import getSubscriptionVideos from "@/actions/getSubscriptionVideo";
 import SubscriptionList from "@/components/subscription/Subscription";
