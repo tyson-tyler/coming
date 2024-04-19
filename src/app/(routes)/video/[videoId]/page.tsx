@@ -27,7 +27,7 @@ export default async function VideoPage({
   });
   const recommendedVideos = await getRecommendedVideos({ video });
   return video && channel && comments ? (
-    <div className="flex flex-col lg:flex-row mx-6 mt-2 gap-4">
+    <div className="flex flex-col lg:flex-row mx-6 gap-4 mb-[100px] mt-10">
       <div className="w-full flex flex-col gap-4">
         <VideoPlayer videoSrc={video.videoSrc} />
         <LikeSubscribePage video={video} channel={channel} />

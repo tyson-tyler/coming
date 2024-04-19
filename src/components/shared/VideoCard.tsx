@@ -20,6 +20,9 @@ const VideoCard: React.FC<VideoCardProps> = ({
   includeDescription = false,
   isVertical = true,
 }) => {
+  const truncatedTitle =
+    video.title.length > 20 ? video.title.slice(0, 20) + "..." : video.title;
+
   return (
     <Link
       className="m-auto w-full block mt-13 mb-3"
@@ -29,24 +32,23 @@ const VideoCard: React.FC<VideoCardProps> = ({
         <Image
           className="object-cover hover:scale-105 rounded-md max-w-[40rem] duration-150 transtion-all ease-in "
           src={video.thumbnailSrc}
-          alt="thumatil"
+          alt="thumbnail"
           layout="fill"
         />
       </div>
 
       <div className="flex gap-x-5 mt-4 flex-col">
-        <h3 className="font-semibold text-lg">{video.title}</h3>
+        <h3 className="font-semibold text-lg">{truncatedTitle}</h3>
         {channel ? (
           <div className="flex gap-2 items-center ">
             <Avatar size={AvatarSize.medium} imageSrc={channel.imageSrc} />
-
             <p className="text-gray-500 text-sm whitespace-nowrap">
               {channel.name}
             </p>
           </div>
         ) : null}
         <p className="text-gray-500 text-sm  mt-2 mb-1">
-          {compactNumberFormat(video.viewCount)} watchs * {""}
+          {compactNumberFormat(video.viewCount)} views * {""}
           {dayjs(video.createdAt).fromNow()}
         </p>
         {includeDescription ? (
@@ -60,4 +62,5 @@ const VideoCard: React.FC<VideoCardProps> = ({
     </Link>
   );
 };
+
 export default VideoCard;

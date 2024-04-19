@@ -76,7 +76,7 @@ export default function UploadPage() {
           <h1 className="text-2xl usespan font-semibold">Upload</h1>
           <span className="flex gap-4">
             <Button
-              type="secondary"
+              type="box"
               className="p-4 hover:opacity-75"
               onClick={() => router.back()}
             >

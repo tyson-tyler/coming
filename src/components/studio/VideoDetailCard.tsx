@@ -14,6 +14,7 @@ import { Trash } from "lucide-react";
 interface VideoDetailCardProps {
   video: Video;
 }
+
 const VideoDetailCard: React.FC<VideoDetailCardProps> = ({ video }) => {
   const router = useRouter();
 
@@ -28,6 +29,8 @@ const VideoDetailCard: React.FC<VideoDetailCardProps> = ({ video }) => {
         .catch(() => toast.error("Video not found"));
     }
   }, [video.id]);
+  const truncatedTitle =
+    video.title.length > 20 ? video.title.slice(0, 20) + "..." : video.title;
   return (
     <div className="m-auto block mt-3 mb-3">
       <div
@@ -45,7 +48,7 @@ const VideoDetailCard: React.FC<VideoDetailCardProps> = ({ video }) => {
       </div>
 
       <div className="flex gap-x-5 mt-4 flex-col justify-center">
-        <h3 className="font-semibold text-lg text-center">{video.title}</h3>
+        <h3 className="font-semibold text-lg text-center">{truncatedTitle}</h3>
       </div>
       <div className="flex flex-col text-center">
         <p>{dayjs(video.createdAt).format("MM, D,YYYY")}</p>

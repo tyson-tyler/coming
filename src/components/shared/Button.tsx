@@ -21,7 +21,7 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
       case "secondary":
         return "text-purple-600 rounded-md hover:bg-purple-700 transtion hover:text-white";
       case "box":
-        return "te";
+        return "text-black dark:text-white";
       case "rounded":
         return "";
       case "rounded-dark":

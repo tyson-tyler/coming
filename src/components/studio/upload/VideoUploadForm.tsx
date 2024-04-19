@@ -22,7 +22,7 @@ const VideoUploadForm: React.FC<VideoUploadFormProps> = ({
   isLoading,
 }) => {
   return (
-    <div className="w-full flex flex-col gap-6">
+    <div className="w-full flex flex-col gap-6 mb-[100px]">
       <TextArea
         register={register}
         id="title"
