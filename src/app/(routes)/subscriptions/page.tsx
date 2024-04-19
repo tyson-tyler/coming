@@ -1,31 +1,9 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import getSubscriptionVideos from "@/actions/getSubscriptionVideo";
 import SubscriptionList from "@/components/subscription/Subscription";
-import Loader from "@/components/Loader";
+import React from "react";
 
-export default function Subscription() {
-  const [loading, setLoading] = useState(true);
-  const [subscriptionVideos, setSubscriptionVideos] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchSubscriptionVideos = async () => {
-      try {
-        const videos = await getSubscriptionVideos();
-        setSubscriptionVideos(videos);
-      } catch (error) {
-        console.error("Error fetching subscription videos:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchSubscriptionVideos();
-  }, []);
-
-  if (loading) {
-    return <Loader />;
-  }
+export default async function Subscription() {
+  const subscriptionVideos = await getSubscriptionVideos();
 
   return subscriptionVideos.length ? (
     <SubscriptionList videos={subscriptionVideos} />
