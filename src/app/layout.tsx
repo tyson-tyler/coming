@@ -55,7 +55,8 @@ export default async function RootLayout({
                   <Cursor />
                   <SidebarProvider>
                     <Navbar />
-                    <div className="mb-50">{children}</div>
+
+                    {children}
                   </SidebarProvider>
 
                   <Footer />

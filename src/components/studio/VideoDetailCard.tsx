@@ -32,10 +32,10 @@ const VideoDetailCard: React.FC<VideoDetailCardProps> = ({ video }) => {
   const truncatedTitle =
     video.title.length > 20 ? video.title.slice(0, 20) + "..." : video.title;
   return (
-    <div className="m-auto block mt-3 mb-3">
+    <div className="sm:mx-auto block mt-3 mb-3">
       <div
         key={video.id}
-        className="relative w-full flex justify-center md:h-[400px] lg:h-[500px] sm:h-[400px] max-w-96 h-[400px] aspect-video"
+        className="relative w-full md:h-[400px] lg:h-[500px] sm:h-[400px] max-w-[20rem] h-[400px] aspect-video grid-container"
       >
         <Link href={`video/${video.id}`}>
           <Image

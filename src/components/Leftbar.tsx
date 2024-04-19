@@ -1,14 +1,10 @@
 "use client";
-import { Brush, Heart, Home, PlusCircle, SubscriptIcon } from "lucide-react";
+import { Brush, Home, PlusCircle } from "lucide-react";
 import Link from "next/link";
-import { BsPersonVideo3 } from "react-icons/bs";
 
 import React from "react";
 
-import { MdSubscriptions, MdWifiChannel } from "react-icons/md";
-import MenuItem from "./MenuItem";
-import { PiSignOut } from "react-icons/pi";
-import { signOut } from "next-auth/react";
+import { HiMiniUserGroup } from "react-icons/hi2";
 
 const items = [
   {
@@ -28,9 +24,9 @@ const items = [
     url: "studio/upload",
   },
   {
-    logo: <MdSubscriptions />,
-    text: "Subscription",
-    url: "/subscriptions",
+    logo: <HiMiniUserGroup />,
+    text: "Communties",
+    url: "https://inter-taupe.vercel.app",
   },
 ];
 

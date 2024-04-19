@@ -1,10 +1,8 @@
 import React from "react";
-import { Brush, Heart, Home } from "lucide-react";
+import { Brush, Home } from "lucide-react";
 import Link from "next/link";
 
-import { BiVideoPlus } from "react-icons/bi";
-import { BsPersonVideo3 } from "react-icons/bs";
-import { MdSubscriptions } from "react-icons/md";
+import { HiMiniUserGroup } from "react-icons/hi2";
 
 const items = [
   {
@@ -18,15 +16,15 @@ const items = [
     url: "/studio",
   },
   {
-    logo: <BiVideoPlus />,
+    logo: <Brush />,
 
     url: "studio/upload",
   },
 
   {
-    logo: <MdSubscriptions />,
+    logo: <HiMiniUserGroup />,
 
-    url: "/subscriptions",
+    url: "https://inter-taupe.vercel.app",
   },
 ];
 

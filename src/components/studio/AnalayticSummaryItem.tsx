@@ -9,7 +9,7 @@ const AnalayticSummaryItem: React.FC<AnalayticSummaryItemProps> = ({
   subtitle,
 }) => {
   return (
-    <div className="w-full flex flex-col flex-wrap justify-between p-2 sm:p-2 md:p-3 lg:p-4 rounde dark:bg-gray-800 mr-4 rounded-md sm:text-sm md:text-md lg:text-md">
+    <div className="w-full flex flex-col flex-wrap justify-between p-2 sm:p-2 md:p-3 lg:p-4 rounde  mr-4 rounded-md sm:text-sm md:text-md lg:text-md">
       <h1 className="lg:text-2xl text-sm sm:text-sm md:text-md text-center mb-1">
         {value}
       </h1>

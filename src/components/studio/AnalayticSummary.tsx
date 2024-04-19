@@ -24,18 +24,17 @@ const AnalayticSummary: React.FC<AnalayticSummaryProps> = ({ videos }) => {
   );
   return (
     <>
-      {" "}
-      <Avatar
-        size={AvatarSize.large}
-        imageSrc={currentChannel?.imageSrc}
-        className="m-auto mt-[50px] mb-[30px]"
-      />
-      <div className="mx-auto flex items-center gap-4">
+      <div className="flex justify-around items-center">
+        <Avatar
+          size={AvatarSize.large}
+          imageSrc={currentChannel?.imageSrc}
+          className="md:mx-auto mt-[50px] mb-[30px]"
+        />
+        <AnalayticSummaryItem subtitle={`@${currentChannel?.handle}`} />{" "}
+      </div>
+
+      <div className="sm:mx-auto flex items-center gap-4">
         <div className="flex justify-center">
-          <AnalayticSummaryItem
-            value={currentChannel?.name}
-            subtitle={`@${currentChannel?.handle}`}
-          />
           <AnalayticSummaryItem
             value={compactNumberFormat(currentChannel?.subscriberCount)}
             subtitle="Followers"
