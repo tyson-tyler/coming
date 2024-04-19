@@ -2,9 +2,7 @@ import { Channel, Video } from "@prisma/client";
 import getCurrentUser from "./getCurrentUser";
 import prisma from "@/vendor/db";
 
-export default async function getSubscriptionVideos(): Promise<
-  (Video & { channel: Channel })[]
-> {
+export default async function getSubscriptionVideos(): Promise<Video[]> {
   const currentUser = await getCurrentUser();
 
   try {
@@ -24,9 +22,20 @@ export default async function getSubscriptionVideos(): Promise<
       orderBy: [{ createdAt: "desc" }],
     });
 
-    return videos;
+    return videos.map((video) => ({
+      id: video.id,
+      channelId: video.channelId,
+      title: video.title,
+      description: video.description,
+      likeCount: video.likeCount,
+      dislikeCount: video.dislikeCount,
+      viewCount: video.viewCount,
+      createdAt: video.createdAt,
+      thumbnailSrc: video.thumbnailSrc,
+      videoSrc: video.videoSrc,
+    }));
   } catch (error: any) {
-    console.log(error);
-    throw error; // Re-throw the error for the caller to handle
+    console.error("Error fetching subscription videos:", error);
+    throw new Error("Failed to fetch subscription videos.");
   }
 }
