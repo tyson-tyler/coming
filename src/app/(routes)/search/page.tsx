@@ -33,7 +33,6 @@ export default function SearchPage() {
                   video={video}
                   channel={video.channel}
                   includeDescription
-                  channelAvatar
                 />
               );
             })
