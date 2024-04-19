@@ -3,7 +3,6 @@ import React from "react";
 import { Channel, Video } from "@prisma/client";
 import VideoCard from "../shared/VideoCard";
 import { useProtectedRoute } from "@/hooks/useProtectedRoutes";
-import Image from "next/image";
 
 interface SubscriptionListProps {
   videos: (Video & { channel: Channel })[];
