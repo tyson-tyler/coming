@@ -38,7 +38,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
         <h3 className="font-semibold text-lg">{video.title}</h3>
         {channel ? (
           <div className="flex gap-2 items-center ">
-            <Avatar size={AvatarSize.medium} imageSrc={channelAvatar} />
+            <Avatar size={AvatarSize.medium} imageSrc={channel.imageSrc} />
 
             <p className="text-gray-500 text-sm whitespace-nowrap">
               {channel.name}
