@@ -36,7 +36,7 @@ export default async function VideoPage({
           <Description video={video} />
         </h1>
 
-        <div className="w-full lg:w-1/4 flex flex-col gap-4 pb-4">
+        <div className="w-full grid-container gap-4 pb-4">
           {recommendedVideos
             ? recommendedVideos.map((recommendedVideo) => {
                 return (
