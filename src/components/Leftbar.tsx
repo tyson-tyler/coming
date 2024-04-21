@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from "react";
 
 import { HiMiniUserGroup } from "react-icons/hi2";
+import { PiArrowElbowLeftUpLight } from "react-icons/pi";
 
 const items = [
   {
@@ -27,6 +28,11 @@ const items = [
     logo: <HiMiniUserGroup />,
     text: "Communties",
     url: "https://inter-taupe.vercel.app",
+  },
+  {
+    logo: <PiArrowElbowLeftUpLight />,
+    text: "About",
+    url: "/about",
   },
 ];
 

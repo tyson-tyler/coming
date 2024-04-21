@@ -1,8 +1,9 @@
 import React from "react";
-import { Brush, Home } from "lucide-react";
+import { Brush, Home, Upload } from "lucide-react";
 import Link from "next/link";
 
 import { HiMiniUserGroup } from "react-icons/hi2";
+import { PiArrowElbowLeftUpLight } from "react-icons/pi";
 
 const items = [
   {
@@ -16,7 +17,7 @@ const items = [
     url: "/studio",
   },
   {
-    logo: <Brush />,
+    logo: <Upload />,
 
     url: "studio/upload",
   },
@@ -25,6 +26,11 @@ const items = [
     logo: <HiMiniUserGroup />,
 
     url: "https://inter-taupe.vercel.app",
+  },
+  {
+    logo: <PiArrowElbowLeftUpLight />,
+    text: "About",
+    url: "/about",
   },
 ];
 
