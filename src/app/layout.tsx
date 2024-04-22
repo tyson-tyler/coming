@@ -56,9 +56,8 @@ export default async function RootLayout({
                     <Navbar />
 
                     {children}
+                    <Footer />
                   </SidebarProvider>
-
-                  <Footer />
                 </ThemeProvider>
               </UploadVideoModalProvider>
             </CurrentChannelProvider>

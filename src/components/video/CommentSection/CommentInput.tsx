@@ -14,7 +14,7 @@ const CommentInput: React.FC<CommentInputProps> = ({ videoId }) => {
   const { text, setText, submitComment } = useComment({ videoId });
 
   return (
-    <div className="flex gap-2 items-start text-sm">
+    <div className="flex gap-2 justify-center items-center text-sm">
       <Avatar imageSrc={currentChannnel?.imageSrc || null} />
       <div className="flex flex-col w-full">
         <input
