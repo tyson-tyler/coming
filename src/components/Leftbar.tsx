@@ -1,12 +1,17 @@
 "use client";
+import getCurrentSubscription from "@/actions/getCurrentSubscriptions";
+import { CurrentUserContext } from "@/context/CurrentUserContext";
+import { Channel } from "@prisma/client";
 import { Brush, Home, PlusCircle } from "lucide-react";
 import Link from "next/link";
 
-import React from "react";
+import React, { useContext } from "react";
 
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { PiArrowElbowLeftUpLight } from "react-icons/pi";
 import { TbEggCracked } from "react-icons/tb";
+import MenuItem from "./MenuItem";
+import Avatar, { AvatarSize } from "./Avatar";
 
 const items = [
   {
@@ -41,8 +46,13 @@ const items = [
     url: "/creator",
   },
 ];
+interface SideBarProps {
+  subscribedChannels: Channel[];
+}
 
-const LeftBar = () => {
+const LeftBar: React.FC<SideBarProps> = ({ subscribedChannels }) => {
+  const currentUser = useContext(CurrentUserContext);
+
   return (
     <div className="relative mr-[28px] max-md:hidden mt-10 ml-[28px]">
       <div>
@@ -62,6 +72,26 @@ const LeftBar = () => {
           </Link>
         ))}
       </div>
+      {currentUser ? (
+        <div className="pt-3">
+          <h2>Following</h2>
+          {subscribedChannels.map((subscribedChannels) => {
+            return (
+              <MenuItem
+                channel={subscribedChannels}
+                key={subscribedChannels.id}
+                label={subscribedChannels.name}
+                logo={
+                  <Avatar
+                    imageSrc={subscribedChannels.imageSrc}
+                    size={AvatarSize.extra}
+                  />
+                }
+              />
+            );
+          })}
+        </div>
+      ) : null}
     </div>
   );
 };

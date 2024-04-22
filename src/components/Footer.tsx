@@ -1,5 +1,5 @@
 import React from "react";
-import { Brush, Home, Upload } from "lucide-react";
+import { Brush, Heart, Home, Upload } from "lucide-react";
 import Link from "next/link";
 
 import { HiMiniUserGroup } from "react-icons/hi2";
@@ -32,6 +32,10 @@ const items = [
   {
     logo: <TbEggCracked />,
     url: "/creator",
+  },
+  {
+    logo: <Heart />,
+    url: "/following",
   },
 ];
 
