@@ -52,7 +52,6 @@ export default async function RootLayout({
                   enableSystem
                   disableTransitionOnChange
                 >
-                  <Cursor />
                   <SidebarProvider>
                     <Navbar />
 

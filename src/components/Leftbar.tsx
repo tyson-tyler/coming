@@ -6,6 +6,7 @@ import React from "react";
 
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { PiArrowElbowLeftUpLight } from "react-icons/pi";
+import { TbEggCracked } from "react-icons/tb";
 
 const items = [
   {
@@ -34,6 +35,11 @@ const items = [
     text: "About",
     url: "/about",
   },
+  {
+    logo: <TbEggCracked />,
+    text: "New Add",
+    url: "/creator",
+  },
 ];
 
 const LeftBar = () => {
@@ -43,13 +49,13 @@ const LeftBar = () => {
         {items.map((item, index) => (
           <Link
             href={item.url}
-            className="flex items-center gap-x-3 text-2xl opacity-80 hover:opacity-100 gap-6"
+            className="flex items-center gap-x-3 text-2xl opacity-80 hover:scale-105 transform transition gap-6"
             key={index}
           >
             <div className="flex items-center gap-x-3 text-2xl my-5 opacity-80 hover:opacity-100 gap-6">
               {item.logo}
             </div>
-            <span className="leading-none text-base flex gap-5 items-center p-4 rounded-md justify-start md:hidden lg:flex font-semibold">
+            <span className="leading-none text-base flex gap-5 items-center p-4 rounded-md justify-start md:hidden lg:flex font-semibold transition-all">
               {" "}
               {item.text}
             </span>

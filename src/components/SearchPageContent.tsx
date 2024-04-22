@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useSearchParams } from "next/navigation";
 
+import { Loader2 } from "lucide-react";
+
 export default function SearchPageContent() {
   const params = useSearchParams();
   const searchQuery = params.get("searchQuery");
@@ -24,19 +26,25 @@ export default function SearchPageContent() {
   return (
     <div className="w-full relative mt-16 flex justify-center">
       <div className="basis-[85%] sm:mb-[100px] lg:mb-[0px] gap-x-10 gap-y-10 mt-5 justify-center grid-container w-full">
-        {videos.length
-          ? videos.map((video) => {
-              return (
-                <VideoCard
-                  key={video.id}
-                  isVertical={false}
-                  video={video}
-                  channel={video.channel}
-                  includeDescription
-                />
-              );
-            })
-          : "No video found"}
+        {videos.length ? (
+          videos.map((video) => {
+            return (
+              <VideoCard
+                key={video.id}
+                isVertical={false}
+                video={video}
+                channel={video.channel}
+                includeDescription
+              />
+            );
+          })
+        ) : (
+          <div className="w-full h-screen justify-center flex items-center">
+            <div className="flex justify-center items-center">
+              <span>No Video Found</span>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

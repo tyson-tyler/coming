@@ -46,9 +46,7 @@ const CreateChannelModel = () => {
         router.refresh();
       })
       .catch(() => {
-        toast.error("Something went wrong", {
-          style: { background: "#333", color: "fff" },
-        });
+        toast.error("Something went wrong");
       })
       .finally(() => {
         setIsLoading(false);

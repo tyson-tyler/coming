@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { PiArrowElbowLeftUpLight } from "react-icons/pi";
+import { TbEggCracked } from "react-icons/tb";
 
 const items = [
   {
@@ -27,10 +28,10 @@ const items = [
 
     url: "https://inter-taupe.vercel.app",
   },
+
   {
-    logo: <PiArrowElbowLeftUpLight />,
-    text: "About",
-    url: "/about",
+    logo: <TbEggCracked />,
+    url: "/creator",
   },
 ];
 
