@@ -32,7 +32,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ onClose }) => {
       />
 
       <div className="absolute rounded-md shadow-md w-60 right-2 top-16 text-sm flex flex-col overflow-hidden z-50 transition-all dark:bg-gray-800 bg-white">
-        <div className="w-full dark:bg-gray-900 bg-white justify-around pl-2 items-center">
+        <div className="w-full dark:bg-gray-800 bg-white justify-around pl-2 items-center">
           <ModeToggle />
           <span className="text-center font-semibold ml-4 mb-2">Mode</span>
         </div>
