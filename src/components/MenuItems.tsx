@@ -21,11 +21,11 @@ const MenuItems: React.FC<MenuItemProps> = ({
       <div
         className={`flex items-center  mt-5 mb-5  ${
           round && "rounded-md"
-        } shadow-lg transition-all hover:scale-105 cursor-pointer `}
+        }  transition-all hover:scale-105 cursor-pointer `}
         onClick={onClick}
       >
         {logo}
-        <div className="justify-center hidden lg:flex ml-2 font-bold">
+        <div className="justify-center hidden lg:flex ml-2 font-semibold">
           {label}
         </div>
       </div>
