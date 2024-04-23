@@ -17,7 +17,7 @@ const Logo = () => {
         </div>
 
         <h3 className="font-bold text-2xl ml-4 hidden md:block">
-          Myaimix <sup className="font-normal text-[12px]">in</sup>
+          Mypagr <sup className="font-normal text-[12px]">in</sup>
         </h3>
       </Link>
     </>
