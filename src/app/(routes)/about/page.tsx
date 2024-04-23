@@ -5,8 +5,8 @@ const About = () => {
   return (
     <>
       <section className="w-full flex-center flex-col mt-6">
-        <h1 className="head_text text-center pt-[200px] text-white ">
-          Brower & Create {""}
+        <h1 className="head_text text-center pt-[200px] dark:text-white text-black">
+          <span className="dark:text-white text-black">Brower & Create</span>
           <br className="max-md:hidden" />
           <span className="usespan text-center">Ai Prompts .</span>
         </h1>

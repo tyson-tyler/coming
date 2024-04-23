@@ -1,14 +1,12 @@
 import React from "react";
 import BoxCard from "./Box";
 import Support from "./support";
-import Footeer from "./Footerr";
-import Logoscrolling from "./logoscrolling";
 
 const Feature = () => {
   return (
     <div className="h-[50vh]">
       <h1 className="head_text text-center pt-5 text-white w-full">
-        Our Features {""}
+        <span className="dark:text-white text-black">Our Features </span>
         <span className="usespan text-center mb-4">in MyPager.</span>
       </h1>
       <div className="flex justify-center items-center min-h-screen flex-wrap">
