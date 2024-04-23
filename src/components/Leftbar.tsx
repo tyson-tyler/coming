@@ -10,8 +10,9 @@ import React, { useContext } from "react";
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { PiArrowElbowLeftUpLight } from "react-icons/pi";
 import { TbEggCracked } from "react-icons/tb";
-import MenuItem from "./MenuItem";
+
 import Avatar, { AvatarSize } from "./Avatar";
+import MenuItems from "./MenuItems";
 
 const items = [
   {
@@ -77,7 +78,7 @@ const LeftBar: React.FC<SideBarProps> = ({ subscribedChannels }) => {
           <h2>Following</h2>
           {subscribedChannels.map((subscribedChannels) => {
             return (
-              <MenuItem
+              <MenuItems
                 channel={subscribedChannels}
                 key={subscribedChannels.id}
                 label={subscribedChannels.name}

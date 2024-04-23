@@ -6,7 +6,6 @@ interface MenuItemProps {
   label: string;
   onClick?: () => void;
   round?: boolean;
-  channel: Channel;
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({
@@ -14,22 +13,19 @@ const MenuItem: React.FC<MenuItemProps> = ({
   label,
   onClick,
   round = false,
-  channel,
 }) => {
   return (
-    <Link href={`/channel/${channel.id}`}>
-      <div
-        className={`flex items-center  mt-5 mb-5  ${
-          round && "rounded-md"
-        } shadow-lg transition-all hover:scale-105 cursor-pointer `}
-        onClick={onClick}
-      >
-        {logo}
-        <div className="justify-center hidden lg:flex ml-2 font-bold">
-          {label}
-        </div>
+    <div
+      className={`flex items-center  mt-5 mb-5  ${
+        round && "rounded-md"
+      } shadow-lg transition-all hover:scale-105 cursor-pointer `}
+      onClick={onClick}
+    >
+      {logo}
+      <div className="justify-center hidden lg:flex ml-2 font-bold">
+        {label}
       </div>
-    </Link>
+    </div>
   );
 };
 
