@@ -33,10 +33,6 @@ const items = [
     logo: <TbEggCracked />,
     url: "/creator",
   },
-  {
-    logo: <Heart />,
-    url: "/following",
-  },
 ];
 
 const Footer = () => {
