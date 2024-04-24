@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mux/mux-player": "^2.5.0",
     "@next-auth/prisma-adapter": "^1.0.7",
     "@prisma/client": "^5.12.1",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-slot": "^1.0.2",
     "@types/uuid": "^9.0.8",
+    "@videojs/http-streaming": "^3.10.0",
+    "@videojs/themes": "^1.0.1",
     "axios": "^1.6.8",
     "button": "^1.1.1",
     "class-variance-authority": "^0.7.0",
@@ -26,6 +29,7 @@
     "next-auth": "^4.24.7",
     "next-cloudinary": "^6.5.0",
     "next-themes": "^0.3.0",
+    "next-video": "^1.0.4",
     "query-string": "^9.0.0",
     "react": "^18",
     "react-dom": "^18",
@@ -34,7 +38,8 @@
     "react-icons": "^5.0.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "video.js": "^8.10.0"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -42,7 +47,7 @@
     "@types/react-dom": "^18",
     "postcss": "^8",
     "prisma": "^5.12.1",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.3",
     "typescript": "^5"
   }
 }

@@ -6,12 +6,11 @@ const Logo = () => {
   return (
     <>
       <Link href={"/"} className="flex items-center">
-        <div className="relative flex justify-center items-center flex-row-reverse">
+        <div className="relative flex justify-center w-10 h-10  items-center flex-row-reverse">
           <Image
             className="ml-3 animate-pulse"
             src={"/logo.svg"}
-            width={50}
-            height={50}
+            fill
             alt="hello"
           />
         </div>
