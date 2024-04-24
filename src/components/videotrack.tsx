@@ -20,6 +20,8 @@ const VideoTrack: React.FC<VideoCardProps> = ({
   includeDescription = false,
   isVertical = true,
 }) => {
+  const truncatedTitle =
+    video.title.length > 20 ? video.title.slice(0, 20) + "..." : video.title;
   return (
     <Link className="mt-3 mb-3" href={`/video/${video.id}`}>
       <div className="relative flex justify-center md:h-[400px] lg:h-[500px] max-w-96 sm:h-[400px] h-[400px] aspect-video">
@@ -32,7 +34,7 @@ const VideoTrack: React.FC<VideoCardProps> = ({
       </div>
 
       <div className="flex gap-x-5 mt-4 flex-col">
-        <h3 className="font-semibold text-lg">{video.title}</h3>
+        <h3 className="font-semibold text-lg">{truncatedTitle}</h3>
         {channel ? (
           <div className="flex gap-2 items-center ">
             {!isVertical && channelAvatar ? (
