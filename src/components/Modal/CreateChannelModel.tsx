@@ -53,7 +53,7 @@ const CreateChannelModel = () => {
       });
   };
   return createChannelModal?.isOpen ? (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center z-50 dark:bg-gray-800 w-3/5 bg-slate-50 text-black dark:text-white shadow-md max-w-2xl rounded-xl">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center z-50 dark:bg-gray-800  bg-slate-50 text-black dark:text-white shadow-md w-full rounded-xl">
       <h1 className="usespan font-bold text-xl p-3 border-b border-gray-500 text-center">
         Welcome here
       </h1>

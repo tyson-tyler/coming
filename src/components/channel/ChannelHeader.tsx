@@ -28,13 +28,15 @@ const ChannelHeader: React.FC<ChannelHeaderProps> = ({
             {channel.name}
           </h1>
           <div className="flex flex-col md:flex-row items-center gap-1 md:gap-3 text-gray-500">
-            <p className="font-medium">{`@${channel.handle}`}</p>
+            <p className="font-medium text-black dark:text-white">{`@${channel.handle}`}</p>
           </div>
           <div className="flex space-around">
-            <p className="mr-4">{`${compactNumberFormat(
+            <p className="mr-4 text-black dark:text-white">{`${compactNumberFormat(
               channel.subscriberCount
             )} Follower`}</p>
-            <p>{`${compactNumberFormat(videoCount)} Videos`}</p>
+            <p className="text-black dark:text-white">{`${compactNumberFormat(
+              videoCount
+            )} Videos`}</p>
           </div>
         </div>
       </div>

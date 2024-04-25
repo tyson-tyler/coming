@@ -33,7 +33,7 @@ const VideoTrack: React.FC<VideoCardProps> = ({
         />
       </div>
 
-      <div className="flex gap-x-5 mt-4 flex-col">
+      <div className="flex gap-x-5 mt-4 flex-col ml-4">
         <h3 className="font-semibold text-lg">{truncatedTitle}</h3>
         {channel ? (
           <div className="flex gap-2 items-center ">

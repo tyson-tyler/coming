@@ -75,7 +75,6 @@ const LeftBar: React.FC<SideBarProps> = ({ subscribedChannels }) => {
       </div>
       {currentUser ? (
         <div className="pt-3">
-          <h2>Following</h2>
           {subscribedChannels.map((subscribedChannels) => {
             return (
               <MenuItems
