@@ -20,7 +20,6 @@ export default async function getTrendingVideos(): Promise<
       orderBy: [
         {
           viewCount: "desc",
-          likeCount: "desc",
         },
       ],
       take: 50,
