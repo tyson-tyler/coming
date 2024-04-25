@@ -24,7 +24,7 @@ const AnalayticSummary: React.FC<AnalayticSummaryProps> = ({ videos }) => {
   );
   return (
     <>
-      <div className="sm:mx-auto flex items-center gap-4 mt-12">
+      <div className="sm:mx-auto flex items-center justify-center gap-4 mt-12">
         <div className="flex justify-center">
           <AnalayticSummaryItem
             value={compactNumberFormat(currentChannel?.subscriberCount)}
