@@ -9,8 +9,8 @@ interface UseLikeDisLikeProps {
 }
 
 export enum LikeDisLikeStatus {
-  Like = 1,
-  DisLike = 2,
+  Liked = 1,
+  Disliked = 2,
   None = 3,
 }
 
@@ -27,9 +27,9 @@ export const useLikeDisLike = ({ videoId }: UseLikeDisLikeProps) => {
     const dislikedVideoIds = currentUser.dislikedVideoIds;
 
     if (likeVideoIds.includes(videoId)) {
-      return LikeDisLikeStatus.Like;
+      return LikeDisLikeStatus.Liked;
     } else if (dislikedVideoIds.includes(videoId)) {
-      return LikeDisLikeStatus.DisLike;
+      return LikeDisLikeStatus.Disliked;
     } else {
       return LikeDisLikeStatus.None;
     }
@@ -45,12 +45,12 @@ export const useLikeDisLike = ({ videoId }: UseLikeDisLikeProps) => {
       try {
         if (action === "like") {
           switch (likeDisLikeStatus) {
-            case LikeDisLikeStatus.Like:
+            case LikeDisLikeStatus.Liked:
               await axios
                 .delete(`/api/videos/${videoId}/like`)
                 .then(() => axios.post(`/api/videos/${videoId}/dislike`));
               break;
-            case LikeDisLikeStatus.DisLike:
+            case LikeDisLikeStatus.Disliked:
               await axios.delete(`/api/videos/${videoId}/dislike`);
 
               break;

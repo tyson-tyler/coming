@@ -18,23 +18,12 @@ const LikeDisLikePage: React.FC<LikeDisLikePageProps> = ({ video }) => {
         className="pr-3  flex items-center gap-4"
         onClick={() => toggleLikeDisLike("like")}
       >
-        {likeDisLikeStatus === LikeDisLikeStatus.Like ? (
-          <HeartCrack className="h-6 w-6" />
-        ) : (
-          <Heart className="h-6 w-6" />
-        )}
-        <p>{compactNumberFormat(video.likeCount)}</p>
-      </button>
-
-      <button
-        className="flex items-center gap-4"
-        onClick={() => toggleLikeDisLike("dislike")}
-      >
-        {likeDisLikeStatus === LikeDisLikeStatus.DisLike ? (
+        {likeDisLikeStatus === LikeDisLikeStatus.Liked ? (
           <Heart className="h-6 w-6" />
         ) : (
-          <HeartCrack className="h-6 w-6" />
+          <Heart className="h-6 w-6 text-red-600" />
         )}
+        <p>{compactNumberFormat(video.dislikeCount)}</p>
       </button>
     </div>
   );
