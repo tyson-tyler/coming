@@ -43,7 +43,12 @@ const Input = () => {
       />
 
       <label htmlFor="search">
-        <Button variant={"ghost"} className="rounded-full" type="submit">
+        <Button
+          variant={"ghost"}
+          className="rounded-full"
+          type="submit"
+          aria-label="search"
+        >
           <BiSearch className="w-5 h-5   text-black dark:text-white" />
         </Button>
       </label>
