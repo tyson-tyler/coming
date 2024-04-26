@@ -7,6 +7,7 @@ import { useContext, useMemo } from "react";
 import Avatar, { AvatarSize } from "../Avatar";
 import AnalayticSummaryItem from "./AnalayticSummaryItem";
 import { compactNumberFormat } from "@/utils/numUtils";
+import Image from "next/image";
 
 interface AnalayticSummaryProps {
   videos: Video[];

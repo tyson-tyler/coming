@@ -23,7 +23,9 @@ const LikeDisLikePage: React.FC<LikeDisLikePageProps> = ({ video }) => {
         ) : (
           <Heart className="h-6 w-6 text-red-600" />
         )}
-        <p>{compactNumberFormat(video.dislikeCount)}</p>
+        <p className="dark:text-white text-black">
+          {compactNumberFormat(video.dislikeCount)}
+        </p>
       </button>
     </div>
   );
