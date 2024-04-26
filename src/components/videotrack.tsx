@@ -23,7 +23,7 @@ const VideoTrack: React.FC<VideoCardProps> = ({
   const truncatedTitle =
     video.title.length > 20 ? video.title.slice(0, 20) + "..." : video.title;
   return (
-    <Link className="mt-3 mb-3" href={`/video/${video.id}`}>
+    <Link className="mt-3 mb-3" href={`/video/${video.id}`} prefetch={true}>
       <div className="relative flex justify-center md:h-[400px] lg:h-[500px] max-w-96 sm:h-[400px] h-[400px] aspect-video">
         <Image
           className="object-cover hover:scale-105 rounded-md duration-150 transtion-all ease-in"

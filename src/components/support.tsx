@@ -14,7 +14,7 @@ const Support = () => {
           <span className="usespan text-center mb-4">use Myaimix</span>
         </h1>
         <video src="" className="w-full h-[300px] lg:h-[500px]" controls />
-        <Link href={"/"} className="mb-32">
+        <Link href={"/"} className="mb-32" prefetch={true}>
           <Button className="p-4 rounded-md my-3">Go to Website 🌴</Button>
         </Link>
       </div>

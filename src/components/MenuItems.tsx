@@ -17,7 +17,7 @@ const MenuItems: React.FC<MenuItemProps> = ({
   channel,
 }) => {
   return (
-    <Link href={`/channel/${channel.id}`}>
+    <Link href={`/channel/${channel.id}`} prefetch={true}>
       <div
         className={`flex items-center  mt-5 mb-5  ${
           round && "rounded-md"

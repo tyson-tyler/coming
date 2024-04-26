@@ -62,6 +62,7 @@ const LeftBar: React.FC<SideBarProps> = ({ subscribedChannels }) => {
             href={item.url}
             className="flex items-center gap-x-3 text-2xl opacity-80 hover:scale-105 transform transition gap-6"
             key={index}
+            prefetch={true}
           >
             <div className="flex items-center gap-x-3 text-2xl my-5 opacity-80 hover:opacity-100 gap-6">
               {item.logo}
