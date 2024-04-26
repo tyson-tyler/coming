@@ -8,22 +8,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc }) => {
   return (
     <div className="relative w-full  flex justify-center m-auto group dark:bg-black">
       <div className={`dark:text-white text-black z-40`}>
-        {/* <MuxPlayer
+        <MuxPlayer
           playback-id={videoSrc}
           src={videoSrc}
           autoPlay
           accentColor="#ea580c"
           metadata-video-title="Test VOD"
           metadata-viewer-user-id="user-id-007"
-          className="lg:h-[600px] md:h-[500px] sm:h-[400px] h-[200px] w-full"
-        ></MuxPlayer> */}
-        <video
-          src={videoSrc}
-          autoPlay
-          preload={videoSrc}
-          controls
-          className="lg:h-[600px] md:h-[500px] sm:h-[400px] h-[200px] w-full"
-        ></video>
+          className="lg:h-[600px] md:h-[500px] sm:h-[400px] h-[250px] w-full rounded-md"
+        />
       </div>
     </div>
   );
