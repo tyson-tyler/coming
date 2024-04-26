@@ -15,7 +15,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc }) => {
           accentColor="#ea580c"
           metadata-video-title="Test VOD"
           metadata-viewer-user-id="user-id-007"
-          className="lg:h-[600px] md:h-[500px] sm:h-[400px] h-[250px] w-full rounded-md"
+          className="lg:h-[600px] md:h-[500px] sm:h-[400px] h-[280px] w-full rounded-md"
         />
       </div>
     </div>
