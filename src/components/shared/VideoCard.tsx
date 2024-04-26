@@ -24,18 +24,11 @@ const VideoCard: React.FC<VideoCardProps> = ({
 }) => {
   const truncatedTitle =
     video.title.length > 20 ? video.title.slice(0, 20) + "..." : video.title;
-  const handleloader = () => {
-    return (
-      <p>
-        <Loader className="w-5 h-5 opacity-75 animate-spin" />
-      </p>
-    );
-  };
+
   return (
     <Link
       className="m-auto w-full block mt-13 mb-3"
       href={`/video/${video.id}`}
-      onClick={handleloader}
     >
       <div className="relative w-full flex justify-center md:h-[400px] lg:h-[550px] max-w-128 sm:h-[400px] h-[400px] aspect-video">
         <Image
