@@ -50,9 +50,9 @@ const LikeSubscribePage: React.FC<LikeSubscribePageProps> = ({
           )}
         </div>
       </div>
-      <div className="flex justify-center items-center w-full">
+      {/* <div className="flex justify-center items-center w-full">
         <LikeDisLikePage video={video} />
-      </div>
+      </div> */}
     </>
   );
 };
