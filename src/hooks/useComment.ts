@@ -38,6 +38,7 @@ export const useComment = ({ videoId }: UseCommentProps) => {
     };
 
     try {
+      router.prefetch;
       if (text.trim()) {
         await axios
           .post(`/api/comments/${videoId}`, data)

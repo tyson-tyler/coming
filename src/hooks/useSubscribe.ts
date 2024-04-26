@@ -27,6 +27,7 @@ const UseSubscribe = ({ channelId }: UseSubscribeProps) => {
       return;
     }
     try {
+      router.prefetch;
       if (hasSubcribed) {
         await axios.delete("/api/users/subscriptions", { data: { channelId } });
       } else {

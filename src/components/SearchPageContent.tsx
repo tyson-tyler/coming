@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useSearchParams } from "next/navigation";
 
-import { Loader2 } from "lucide-react";
-
 export default function SearchPageContent() {
   const params = useSearchParams();
   const searchQuery = params.get("searchQuery");
