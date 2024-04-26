@@ -26,6 +26,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Myaimix",
   description: "video streaming",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default async function RootLayout({
