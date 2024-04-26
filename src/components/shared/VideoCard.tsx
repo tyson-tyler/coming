@@ -37,6 +37,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
           src={video.thumbnailSrc}
           alt="thumbnail"
           layout="fill"
+          loading="lazy"
         />
       </div>
 
