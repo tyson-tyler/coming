@@ -41,7 +41,7 @@ const ChannelHeader: React.FC<ChannelHeaderProps> = ({
         </div>
       </div>
       {channel.userId === currentUser?.id ? (
-        <Link href={"/studio"}>
+        <Link href={"/studio"} prefetch={true}>
           <Button
             type="primary"
             className="p-2 hover:opacity-70 cursor-pointer"

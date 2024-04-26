@@ -30,6 +30,7 @@ const VideoTrack: React.FC<VideoCardProps> = ({
           src={video.thumbnailSrc}
           alt="thumatil"
           layout="fill"
+          loading="lazy"
         />
       </div>
 
