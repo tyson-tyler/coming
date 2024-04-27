@@ -2,8 +2,14 @@ import getCurrentChannel from "@/actions/getCurrentChannel";
 import getVideosByChannelId from "@/actions/getVideosByChannelId";
 import AnalayticSummary from "@/components/studio/AnalayticSummary";
 import VideoDetailCard from "@/components/studio/VideoDetailCard";
-import VideoTrack from "@/components/videotrack";
-import React from "react";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Studio",
+  },
+};
 
 const page = async () => {
   const currentChannel = await getCurrentChannel();

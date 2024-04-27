@@ -1,9 +1,7 @@
 "use client";
 
-import CreateChannelModel from "@/components/Modal/CreateChannelModel";
 import UploadVideoModel from "@/components/Modal/UploadVideoModel";
 import Button from "@/components/shared/Button";
-import VideoPreview from "@/components/studio/upload/VideoPreview";
 import VideoUploadForm from "@/components/studio/upload/VideoUploadForm";
 import { UploadVideoModeContext } from "@/context/UploadVideoModelContext";
 import { useRouter } from "next/navigation";
@@ -13,7 +11,7 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useProtectedRoute } from "@/hooks/useProtectedRoutes";
-import LeftBar from "@/components/Leftbar";
+
 export default function UploadPage() {
   useProtectedRoute();
   const uploadVideoModal = useContext(UploadVideoModeContext);

@@ -20,8 +20,14 @@ import SidebarProvider from "@/context/SidebarContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Myaimix",
-  description: "video streaming",
+  title: {
+    default: "Myaimix",
+    template: "%s -MyAiMix",
+  },
+  description: "Best ai generated video sharing platform for free",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default async function RootLayout({

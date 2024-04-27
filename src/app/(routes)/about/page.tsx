@@ -1,5 +1,12 @@
 import GallerySection from "@/components/GallerySection";
 import Feature from "@/components/Feature";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "About",
+  },
+};
 
 const About = () => {
   return (

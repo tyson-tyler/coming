@@ -1,9 +1,15 @@
 import getTreadingVideo from "@/actions/NewCreator";
 import LeftBar from "@/components/Leftbar";
 import VideoCard from "@/components/shared/VideoCard";
-import Subscription from "../subscriptions/page";
 import getCurrentSubscription from "@/actions/getCurrentSubscriptions";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "New Add",
+  },
+};
 export default async function Home() {
   const trendingVideos = await getTreadingVideo();
   const subscriptions = await getCurrentSubscription();
