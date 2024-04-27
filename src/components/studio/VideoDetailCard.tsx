@@ -37,7 +37,7 @@ const VideoDetailCard: React.FC<VideoDetailCardProps> = ({ video }) => {
         key={video.id}
         className="relative w-full md:h-[400px] lg:h-[500px] sm:h-[400px] max-w-[20rem] h-[400px] m-auto aspect-video grid-container"
       >
-        <Link href={`video/${video.id}`}>
+        <Link href={`video/${video.id}`} prefetch={true}>
           <Image
             className="object-cover hover:scale-105 rounded-md duration-150 transtion-all ease-in"
             alt="video-detail"

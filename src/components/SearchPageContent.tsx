@@ -4,17 +4,19 @@ import { Channel, Video } from "@prisma/client";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function SearchPageContent() {
   const params = useSearchParams();
   const searchQuery = params.get("searchQuery");
 
   const [videos, setVideos] = useState<(Video & { channel: Channel })[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     axios
       .get("/api/videos", { params: { searchQuery } })
+
       .then((data) => {
         setVideos(data.data as unknown as (Video & { channel: Channel })[]);
       })
@@ -39,7 +41,7 @@ export default function SearchPageContent() {
         ) : (
           <div className="w-full h-screen justify-center flex items-center">
             <div className="flex justify-center items-center">
-              <span>No Video Found</span>
+              <span className="usespan text-xl">Loading...</span>
             </div>
           </div>
         )}
