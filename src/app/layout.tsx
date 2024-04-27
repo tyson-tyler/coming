@@ -22,7 +22,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "Myaimix",
-    template: "%s -MyAiMix",
+    template: "%s - MyAiMix",
   },
   description: "Best ai generated video sharing platform for free",
   twitter: {

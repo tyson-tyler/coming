@@ -5,12 +5,25 @@ import increaseVideoViewCount from "@/actions/increaseVideoViewCount";
 import VideoCard from "@/components/shared/VideoCard";
 import CommentSection from "@/components/video/CommentSection/CommentSection";
 import Description from "@/components/video/Description";
-import LikeDisLikePage from "@/components/video/LikeSubscribePage/LikeDisLikePage";
 import LikeSubscribePage from "@/components/video/LikeSubscribePage/LikeSubscribePage";
 import VideoPlayer from "@/components/video/VideoPlayer";
+import { Metadata } from "next";
 
 interface VideoPageProps {
   videoId?: string;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: VideoPageProps;
+}): Promise<Metadata> {
+  const { videoId } = params;
+  const video = await increaseVideoViewCount({ videoId });
+
+  return {
+    title: video?.title,
+  };
 }
 
 export default async function VideoPage({
