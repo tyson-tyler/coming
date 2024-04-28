@@ -14,14 +14,6 @@ interface VideoCardProps {
   isVertical?: boolean;
 }
 
-const prefetchResource = (event: any) => {
-  if (event.target.dataset.prefetched) return;
-  event.target.dataset.prefetched = true;
-  const prefetchLink = document.createElement("link");
-  prefetchLink.rel = "prefetch";
-  prefetchLink.href = event.target.getAttribute("href");
-  document.head.appendChild(prefetchLink);
-};
 const VideoCard: React.FC<VideoCardProps> = ({
   channel,
   channelAvatar,
@@ -36,7 +28,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
     <Link
       className="m-auto w-full block mt-13 mb-3"
       href={`/video/${video.id}`}
-      onClick={prefetchResource}
+      prefetch={true}
     >
       <div className="relative w-full flex justify-center md:h-[400px] lg:h-[550px] max-w-128 sm:h-[400px] h-[400px] aspect-video">
         <Image
