@@ -12,6 +12,7 @@ const Logo = () => {
             src={"/logo1.svg"}
             fill
             alt="hello"
+            loading="lazy"
           />
         </div>
 

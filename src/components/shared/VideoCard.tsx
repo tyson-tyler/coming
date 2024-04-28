@@ -38,6 +38,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
           alt="thumbnail"
           layout="fill"
           loading="lazy"
+          sizes="(max-width:40px):100vw"
         />
       </div>
 
