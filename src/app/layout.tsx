@@ -16,6 +16,7 @@ import CurrentChannelProvider from "@/context/CreateChannelContext";
 import UploadVideoModalProvider from "@/context/UploadVideoModelContext";
 
 import SidebarProvider from "@/context/SidebarContext";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,6 +45,7 @@ export default async function RootLayout({
       >
         <CreateChannelModalProvider>
           <Toaster />
+          <SpeedInsights />
           <CreateChannelModel />
           <CurrentUserProvider user={currentUser}>
             <CurrentChannelProvider Channel={currentChannel}>
