@@ -5,6 +5,7 @@
 body {
   color: white;
   overflow-x: hidden;
+  font-display: swap;
 }
 
 .usespan {
@@ -51,65 +52,6 @@ body {
   background: gray;
 }
 
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(234, 35, 184);
-}
-.cursor-text {
-  font-size: 5px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  display: none;
-}
-.tech-slideshow {
-  height: 400px;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-}
-
-.tech-slideshow > div {
-  height: 400px;
-  width: 2526px;
-  background: url(https://th.bing.com/th/id/OIP.w69vA7LT3oOCVEFxryUqogHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  transform: translate3d(0, 0, 0);
-}
-.tech-slideshow .mover-1 {
-  animation: moveSlideshow 12s linear infinite;
-}
-.tech-slideshow .mover-2 {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-  background-position: 0 -200px;
-  animation: moveSlideshow 15s linear infinite;
-}
-.tech-slideshow:hover .mover-2 {
-  opacity: 1;
-}
-
-@keyframes moveSlideshow {
-  100% {
-    transform: translateX(-66.6666%);
-  }
-}
 a,
 button {
   color: inherit;
@@ -169,13 +111,6 @@ button {
   grid-gap: 20px;
 }
 
-p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #fff;
-  margin: 0;
-}
 .section-fluid-main {
   position: relative;
   display: block;
@@ -305,32 +240,4 @@ p {
 }
 .head_text {
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-white sm:text-6xl;
-}
-.slide img {
-  width: 200px;
-  height: 200px;
-  animation: scroll 10s linear infinite;
-  border-radius: 100%;
-  object-fit: cover;
-}
-
-.slide-track {
-  display: flex;
-  gap: 3em;
-  overflow: hidden;
-}
-
-/* .slider {
-  
-
-  
-} */
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translatex(-1000%);
-  }
 }

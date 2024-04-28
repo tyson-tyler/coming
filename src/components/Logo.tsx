@@ -5,7 +5,7 @@ import React from "react";
 const Logo = () => {
   return (
     <>
-      <Link href={"/"} className="flex items-center" prefetch={true}>
+      <Link href={"/"} className="flex items-center">
         <div className="relative flex justify-center w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-12 lg:h-12  items-center flex-row-reverse">
           <Image
             className="ml-3 animate-pulse"

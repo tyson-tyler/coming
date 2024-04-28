@@ -7,7 +7,7 @@ interface VideoPlayerProps {
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc }) => {
   return (
     <div className="relative w-full  flex justify-center m-auto group dark:bg-black">
-      <div className={`dark:text-white text-black z-40`}>
+      <div className={`dark:text-white text-black md:z-40`}>
         <MuxPlayer
           playback-id={videoSrc}
           src={videoSrc}
